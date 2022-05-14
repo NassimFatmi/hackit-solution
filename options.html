@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="button.css" />
+	</head>
+	<style>
+		body {
+			font-family: "Poppins", sans-serif;
+			background-color: #333;
+		}
+		.ext-card {
+			background-color: #fff;
+			width: fit-content;
+			padding: 8px;
+			position: relative;
+			font-size: 10px;
+			text-align: center;
+			box-shadow: 0 3px 1px 0 rgb(0 0 0 / 10%);
+		}
+		.ext-card .stats {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 8px;
+			margin-bottom: 8px;
+		}
+		.ext-card .stats div {
+			display: flex;
+			margin-inline: 3px;
+			justify-content: center;
+		}
+
+		.ext-card .stats img {
+			width: 10px;
+			margin-right: 3px;
+		}
+		.ext-card .stats div:nth-child(2) img {
+			transform: rotate(180deg) translateY(-3px);
+		}
+		.ext-card .stats div:nth-child(3) img {
+			transform: translateY(2px);
+		}
+		.ext-card .feeling {
+			color: #33d9b2;
+		}
+		.ext-card .close {
+			cursor: pointer;
+			position: absolute;
+			top: -7.5px;
+			right: -7.5px;
+			background-color: #6d6d6d;
+			border-radius: 50%;
+			height: 15px;
+			width: 15px;
+			line-height: 14px;
+			text-align: center;
+			color: #fff;
+		}
+	</style>
+	<body>
+		<div id="buttonDiv"></div>
+		<div class="ext-card">
+			People <span class="feeling">likes</span> this video
+			<div class="stats">
+				<div><img src="images/like.png" /><span>81.1</span></div>
+				<div><img src="images/like.png" /><span>0</span></div>
+				<div><img src="images/neutral.png" /><span>18.9</span></div>
+			</div>
+			<span class="close">x</span>
+		</div>
+		<script src="options.js"></script>
+	</body>
+</html>

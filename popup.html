@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script src="chart.min.js"></script>
+	</head>
+	<body>
+		<nav>My Extension</nav>
+		<main>
+			<section class="video-desc">
+				<div class="card">
+					<div class="thumbnail">
+						<img alt="video-thumbnail" />
+					</div>
+					<div class="info">
+						<h3>PNL - Au DD [Clip Officiel]</h3>
+						<div class="stats">
+							<span>203M</span>
+						</div>
+						<div class="channel">
+							<img
+								src="https://yt3.ggpht.com/ytc/AKedOLTiIjH7EbjfTNmz4y-vIY583rgSTFsJJ-ApQYrXPg=s88-c-k-c0x00ffffff-no-rj"
+								alt="channel-name"
+							/>
+							<h4>PNL</h4>
+						</div>
+						<p>
+							Réalisation: QLF Producteur : QLF Records Production exécutive :
+							Arthur Catton (Big Productions) Beat : Nk.F x
+						</p>
+					</div>
+				</div>
+			</section>
+			<section class="charts-section">
+				<h2>Statistiques</h2>
+				<div class="progress">
+					<div class="positive">Positive</div>
+					<div class="neutral">Neutral</div>
+					<div class="negative">Negative</div>
+				</div>
+				<div id="loading">
+					<div class="lds-dual-ring"></div>
+				</div>
+				<div class="charts">
+					<div class="chart">
+						<canvas id="myChart" width="300" height="300"></canvas>
+					</div>
+				</div>
+			</section>
+			<section class="top-comments">
+				<h2><span>Top</span> comments</h2>
+				<div class="content">
+					<details class="best">
+						<summary><span>Best</span> 10 comments</summary>
+					</details>
+					<details class="worst">
+						<summary><span>Worst</span> 10 comments</summary>
+					</details>
+				</div>
+			</section>
+		</main>
+		<script src="popup.js"></script>
+	</body>
+</html>

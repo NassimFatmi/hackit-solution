@@ -1,0 +1,230 @@
+:root {
+	--green-color: #32ff7e;
+	--blue-color: #18dcff;
+	--red-color: #e91e63ab;
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	width: 600px;
+	font-family: "Poppins", sans-serif;
+	border: 1px solid black;
+	background-color: #f6faff;
+}
+nav {
+	text-align: center;
+	padding: 1rem;
+}
+.video-desc {
+	display: flex;
+	justify-content: center;
+}
+.video-desc .card {
+	background-color: #fff;
+	margin: 1rem;
+	display: flex;
+	padding: 1rem;
+	border-radius: 1rem;
+	box-shadow: 0px 3px 4px 0 rgb(0 0 0 / 10%);
+	align-items: center;
+}
+.video-desc .card .thumbnail img {
+	object-fit: cover;
+	width: 250px;
+	border-radius: 1rem;
+}
+.video-desc .card .thumbnail {
+	margin-right: 1rem;
+}
+.video-desc .card .info .stats {
+	font-size: 12px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+.video-desc .card .info .channel {
+	display: flex;
+	align-items: center;
+}
+.video-desc .card .info .channel img {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+}
+.video-desc .card .info .channel h4 {
+	margin-left: 5px;
+}
+
+.video-desc .card .info p {
+	margin-top: 8px;
+	font-size: 12px;
+	color: #707070;
+}
+.charts-section {
+	margin-inline: 1rem;
+}
+.charts .chart {
+	width: 300px;
+	height: 300px;
+}
+.top-comments {
+	margin-top: 2rem;
+	margin-inline: 1rem;
+}
+.top-comments .content {
+	margin-top: 1rem;
+}
+.top-comments .content details {
+	padding: 1rem;
+	background-color: #fff;
+	border-radius: 1rem;
+	box-shadow: 0px 3px 4px 0 rgb(0 0 0 / 10%);
+	margin-bottom: 1rem;
+}
+.top-comments summary {
+	cursor: pointer;
+}
+.top-comments .content .best summary span {
+	color: var(--green-color);
+}
+.top-comments .content .worst summary span {
+	color: var(--red-color);
+}
+.top-comments .content .comment {
+	padding-top: 1rem;
+}
+.top-comments .content .comment:not(:last-child) {
+	border-bottom: 1px solid rgb(0 0 0 / 10%);
+}
+.top-comments .comment .stats {
+	display: flex;
+	align-items: center;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+.top-comments .comment .stats div {
+	margin-right: 1rem;
+}
+
+.top-comments .comment .stats img {
+	width: 15px;
+	margin-right: 3px;
+}
+.top-comments .comment .stats div:nth-child(2) img {
+	transform: rotate(180deg) translateY(-5px);
+}
+.top-comments .comment .stats div:nth-child(3) img {
+	transform: translateY(3px);
+}
+.charts-section .progress {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	height: 20px;
+	background-color: #fff;
+	border-radius: 6px;
+	display: flex;
+	overflow: hidden;
+	display: none;
+}
+.charts-section .progress .positive {
+	background-color: var(--green-color);
+	color: #fff;
+	height: 100%;
+	text-align: center;
+}
+.charts-section .progress .neutral {
+	background-color: var(--blue-color);
+	color: #fff;
+	height: 100%;
+	text-align: center;
+}
+.charts-section .progress .negative {
+	background-color: var(--red-color);
+	color: #fff;
+	height: 100%;
+	text-align: center;
+}
+
+.ext-card {
+	background-color: #fff;
+	width: 180px;
+	width: fit-content;
+	padding: 8px;
+	position: absolute;
+	font-size: 10px;
+	text-align: center;
+	box-shadow: 0 3px 1px 0 rgb(0 0 0 / 10%);
+}
+.ext-card .stats {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+.ext-card .stats div {
+	display: flex;
+	margin-inline: 3px;
+	justify-content: center;
+}
+
+.ext-card .stats img {
+	width: 10px;
+	margin-right: 3px;
+}
+.ext-card .stats div:nth-child(2) img {
+	transform: rotate(180deg) translateY(-3px);
+}
+.ext-card .stats div:nth-child(3) img {
+	transform: translateY(2px);
+}
+.ext-card .feeling {
+	color: #33d9b2;
+}
+.ext-card .close {
+	cursor: pointer;
+	position: absolute;
+	top: -7.5px;
+	right: -7.5px;
+	background-color: #6d6d6d;
+	border-radius: 50%;
+	height: 15px;
+	width: 15px;
+	line-height: 14px;
+	text-align: center;
+	color: #fff;
+}
+.lds-dual-ring {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+}
+.lds-dual-ring:after {
+	content: " ";
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin: 8px;
+	border-radius: 50%;
+	border: 6px solid #000;
+	border-color: #707070 transparent #707070 transparent;
+	animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+#loading {
+	text-align: center;
+}
+.charts-section .charts {
+	display: none;
+	justify-content: center;
+}
